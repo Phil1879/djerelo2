@@ -24,6 +24,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css\style.css">
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1181822537174136');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1181822537174136&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress"></div>
@@ -32,8 +49,6 @@
     <button class="lang-btn active" onclick="switchLanguage('ua')">UA</button>
     <button class="lang-btn" onclick="switchLanguage('ru')">RU</button>
   </div>
-
-  <a href="#contact" class="sticky-cta btn-primary-custom" data-ua="Отримати допомогу" data-ru="Получить помощь">Отримати допомогу</a>
 
   <div class="container-fluid px-4 px-lg-5">
     
@@ -469,7 +484,7 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section class="section-spacing bg-accent text-white rounded-3 px-4 px-lg-5 py-5" id="form" data-aos="fade-up">
+    <!-- <section class="section-spacing bg-accent text-white rounded-3 px-4 px-lg-5 py-5" id="form" data-aos="fade-up">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -527,7 +542,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="py-5 text-center text-muted border-top mt-5" data-aos="fade-in">
@@ -592,7 +607,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
   <script src="js\scrip.js"></script>
-  
+
   <!-- Binotel call btn -->
   <script type="text/javascript">
   (function(d, w, s) {

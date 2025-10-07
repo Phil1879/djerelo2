@@ -67,6 +67,33 @@
       }
     });
     
+// Замените функцию openBinotelWidget на эту:
+function openBinotelWidget() {
+    // Ищем кнопку Binotel по правильному селектору
+    const binotelButton = document.getElementById('bingc-phone-button');
+    
+    if (binotelButton) {
+        binotelButton.click();
+    } else {
+        console.log('Binotel button not found');
+        // Альтернативное действие - прокрутка к форме
+        document.getElementById('form').scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Обновите обработчики для кнопок (добавьте этот код в DOMContentLoaded):
+const consultButtons = document.querySelectorAll('a.btn-primary-custom, a[href="#form"]');
+    
+consultButtons.forEach(button => {
+    // Убедитесь, что кнопка не sticky-cta
+    if (!button.classList.contains('sticky-cta')) {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            openBinotelWidget();
+        });
+    }
+});
+
     // Hero Gradient Animation
     const heroSection = document.getElementById('heroSection');
     if (heroSection) {
@@ -146,3 +173,11 @@
     
     window.openPrivacyModal = openPrivacyModal;
     window.closePrivacyModal = closePrivacyModal;
+// Обработчик для sticky-cta кнопки
+const stickyCta = document.querySelector('.sticky-cta');
+if (stickyCta) {
+    stickyCta.addEventListener('click', function(e) {
+        e.preventDefault();
+        openBinotelWidget();
+    });
+}
