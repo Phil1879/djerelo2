@@ -1134,6 +1134,42 @@
   })(document, window, 'script');
   </script> 
 <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-830468260/Ml6iCNWM2bAbEKTh_4sD',
+        'event_callback': callback
+    });
+    return false;
+  }
+
+  // === КОД ДЛЯ ОТСЛЕЖИВАНИЯ КНОПКИ BINOTEL ===
+  document.addEventListener('DOMContentLoaded', function() {
+    // Слушаем все клики на документе
+    document.addEventListener('click', function(event) {
+      // Проверяем, был ли клик по самой кнопке или по любому из её внутренних элементов
+      const clickedElement = event.target.closest('#bingc-phone-button');
+      
+      if (clickedElement) {
+        // Запускаем отправку конверсии в Google Ads
+        gtag_report_conversion();
+        
+        // Дополнительно отправляем событие в Google Analytics 4
+        gtag('event', 'binotel_callback_click', {
+          'event_category': 'Кнопка звонка',
+          'event_label': 'Binotel Widget Button'
+        });
+        
+        console.log('Клик по кнопке Binotel зафиксирован! Конверсия отправлена.');
+      }
+    });
+  });
+  </script>
+<script>
 // Media Carousel Functionality
 document.addEventListener('DOMContentLoaded', function() {
   // Функция для инициализации карусели
