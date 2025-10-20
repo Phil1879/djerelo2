@@ -440,13 +440,13 @@
 </section>
 
 <!-- Marina's Story Section -->
-<section id="results" class="section-spacing bg-accent-light">
+<section id="results" class="section-spacing bg-accent text-white">
   <div class="container">
     <div class="row justify-content-center mb-5">
       <div class="col-lg-10 text-center">
-        <h2 class="display-5 fw-bold mb-4 text-dark">З темряви – додому: реальна історія мого сина</h2>
-        <p class="fs-4 text-green-50 fw-light mb-2">Привіт! Мене звуть Марина, і я мама.</p>
-        <p class="fs-5 text-green-50 fw-light">
+        <h2 class="display-5 fw-bold mb-4">З темряви – додому: реальна історія мого сина</h2>
+        <p class="fs-4 text-light fw-light mb-2">Привіт! Мене звуть Марина, і я мама.</p>
+        <p class="fs-5 text-light fw-light">
           Раніше я думала, що цього вже достатньо, щоб бути щасливою. Але все змінилося, коли мій син Віталій почав зникати з мого життя - поступово, мов тінь, яка з кожним днем ставала все темнішою.
         </p>
       </div>
@@ -463,7 +463,7 @@
           <!-- Как было -->
           <div class="bg-white bg-opacity-10 backdrop-blur rounded-3 p-4">
             <h3 class="h4 fw-bold mb-3 text-warning">Як було:</h3>
-            <ul class="list-unstyled text-green-50">
+            <ul class="list-unstyled text-light">
               <li class="d-flex align-items-start mb-2">
                 <span class="text-danger me-2 fs-5">✗</span>
                 <span>Він перестав приходити додому</span>
@@ -494,25 +494,25 @@
           <!-- Как стало -->
           <div class="bg-white bg-opacity-10 backdrop-blur rounded-3 p-4">
             <h3 class="h4 fw-bold mb-3 text-warning">Як стало:</h3>
-            <ul class="list-unstyled text-green-50">
+            <ul class="list-unstyled text-light">
               <li class="d-flex align-items-start mb-2">
-                <span class="text-warning me-2 fs-5">✓</span>
+                <span class="text-success me-2 fs-5">✓</span>
                 <span>Сьогодні мій син Віталій – випускник Центру «Джерело»</span>
               </li>
               <li class="d-flex align-items-start mb-2">
-                <span class="text-warning me-2 fs-5">✓</span>
+                <span class="text-success me-2 fs-5">✓</span>
                 <span>Я дивлюсь йому у вічі - і там знову мій син. Живий. Справжній</span>
               </li>
               <li class="d-flex align-items-start mb-2">
-                <span class="text-warning me-2 fs-5">✓</span>
+                <span class="text-success me-2 fs-5">✓</span>
                 <span>Має мрії. Він каже про майбутнє. Він дякує мені</span>
               </li>
               <li class="d-flex align-items-start mb-2">
-                <span class="text-warning me-2 fs-5">✓</span>
+                <span class="text-success me-2 fs-5">✓</span>
                 <span>І я знов мама. Не тінь, не тривога – мама</span>
               </li>
               <li class="d-flex align-items-start">
-                <span class="text-warning me-2 fs-5">✓</span>
+                <span class="text-success me-2 fs-5">✓</span>
                 <span>Ми вчимося жити із самого початку</span>
               </li>
             </ul>
@@ -523,7 +523,7 @@
     
     <div class="row justify-content-center mt-5">
       <div class="col-lg-10">
-        <p class="text-center fs-4 fw-semibold fst-italic text-dark mb-5">
+        <p class="text-center fs-4 fw-semibold fst-italic text-light mb-5">
           Я втратила сина. Але він ще дихав. І я не могла просто дивитися, як він згасає.
         </p>
         
@@ -551,54 +551,127 @@
 </section>
 
 <!-- Stories Section -->
-<section class="section-spacing bg-dark text-white rounded-3">
+<section class="section-spacing bg-gradient-light">
   <div class="container">
     <div class="row justify-content-center mb-5">
-      <div class="col-lg-8 text-center">
-        <h2 class="display-5 fw-bold mb-4">Історії переможців залежності</h2>
-        <p class="fs-5 text-muted">Справжні історії батьків, які повернули своїх дітей до життя</p>
+      <div class="col-lg-10 text-center">
+        <h2 class="display-5 fw-bold mb-4 text-accent">Історії переможців залежності</h2>
+        <p class="fs-5 text-muted">
+          Справжні історії батьків, які повернули своїх дітей до життя
+        </p>
       </div>
     </div>
-    
-    <div class="row g-4">
-      <!-- Story 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card-custom bg-secondary border-0 text-white h-100">
-          <div class="testimonial-avatar mx-auto mb-4">
-            <img src="https://via.placeholder.com/100x100/667eea/ffffff?text=OM" alt="Олександр" class="rounded-circle w-100 h-100 object-fit-cover">
+
+    <!-- Stories Carousel -->
+    <div class="position-relative">
+      <div class="overflow-hidden">
+        <div id="storiesTrack" class="row flex-nowrap g-4 transition-all" style="transition: transform 0.5s ease-in-out;">
+          <!-- Story 1 -->
+          <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+            <div class="card-custom h-100 cursor-pointer" onclick="openStoryModal(0)">
+              <div class="text-center mb-4">
+                <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/photo_2025-08-14_03-44-11-300x246.jpg" alt="Батько Вікторії" class="rounded-circle mx-auto shadow" style="width: 80px; height: 80px; object-fit: cover;">
+              </div>
+              <div class="card-body d-flex flex-column text-center">
+                <h3 class="h5 fw-bold mb-2 text-accent">Батько Вікторії</h3>
+                <p class="text-muted small mb-3">Сім'я з надією</p>
+                <h4 class="h6 fw-bold mb-3">Випадкова зупинка і новий шанс на життя</h4>
+                <p class="text-muted mb-4 flex-grow-1 small">
+                  Зовсім випадково я побачив оголошення про Центр...
+                </p>
+                <div class="text-accent fw-semibold small">Читати далі →</div>
+              </div>
+            </div>
           </div>
-          <h3 class="h5 fw-bold mb-3">Батько Олександр</h3>
-          <p class="text-muted mb-3">"Мій син був на межі. Завдяки програмі Центру він не лише позбувся залежності, а й знайшов себе. Зараз працює, створює сім'ю."</p>
-          <div class="text-accent fw-semibold">2 роки тверезості</div>
+
+          <!-- Story 2 -->
+          <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+            <div class="card-custom h-100 cursor-pointer" onclick="openStoryModal(1)">
+              <div class="text-center mb-4">
+                <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/photo_2025-08-14_04-03-53-300x169.jpg" alt="Мама Валерія" class="rounded-circle mx-auto shadow" style="width: 80px; height: 80px; object-fit: cover;">
+              </div>
+              <div class="card-body d-flex flex-column text-center">
+                <h3 class="h5 fw-bold mb-2 text-accent">Мама Валерія</h3>
+                <p class="text-muted small mb-3">Порятунок від трамадолу</p>
+                <h4 class="h6 fw-bold mb-3">Як програма "Джерело" врятувала мого сина</h4>
+                <p class="text-muted mb-4 flex-grow-1 small">
+                  Коли я нарешті усвідомила, що мій син став залежним...
+                </p>
+                <div class="text-accent fw-semibold small">Читати далі →</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 3 -->
+          <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+            <div class="card-custom h-100 cursor-pointer" onclick="openStoryModal(2)">
+              <div class="text-center mb-4">
+                <img src="https://ninarkotikam.com/wp-content/uploads/2024/03/photo_2025-08-14_12-37-08-300x225.jpg" alt="Мама Павла" class="rounded-circle mx-auto shadow" style="width: 80px; height: 80px; object-fit: cover;">
+              </div>
+              <div class="card-body d-flex flex-column text-center">
+                <h3 class="h5 fw-bold mb-2 text-accent">Мама Павла</h3>
+                <p class="text-muted small mb-3">11 років залежності подолано</p>
+                <h4 class="h6 fw-bold mb-3">Як моя дитина подолала 11 років залежності</h4>
+                <p class="text-muted mb-4 flex-grow-1 small">
+                  Я – мама наркозалежного з 11-річним стажем...
+                </p>
+                <div class="text-accent fw-semibold small">Читати далі →</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 4 -->
+          <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+            <div class="card-custom h-100 cursor-pointer" onclick="openStoryModal(3)">
+              <div class="text-center mb-4">
+                <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/photo_2025-08-14_15-53-20-300x200.jpg" alt="Мама Олексія та Жори" class="rounded-circle mx-auto shadow" style="width: 80px; height: 80px; object-fit: cover;">
+              </div>
+              <div class="card-body d-flex flex-column text-center">
+                <h3 class="h5 fw-bold mb-2 text-accent">Мама Олексія та Жори</h3>
+                <p class="text-muted small mb-3">Два сини повернулись до життя</p>
+                <h4 class="h6 fw-bold mb-3">Я повернула своїх синів до життя</h4>
+                <p class="text-muted mb-4 flex-grow-1 small">
+                  Мене звуть Лідія. Колись у наш будинок увірвалося справжнє пекло...
+                </p>
+                <div class="text-accent fw-semibold small">Читати далі →</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <!-- Story 2 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card-custom bg-secondary border-0 text-white h-100">
-          <div class="testimonial-avatar mx-auto mb-4">
-            <img src="https://via.placeholder.com/100x100/764ba2/ffffff?text=IT" alt="Ірина" class="rounded-circle w-100 h-100 object-fit-cover">
-          </div>
-          <h3 class="h5 fw-bold mb-3">Мати Ірина</h3>
-          <p class="text-muted mb-3">"Донька втрачала все: навчання, друзів, здоров'я. Зараз вона закінчила курси, знайшла роботу. Ми знову сміємося разом."</p>
-          <div class="text-accent fw-semibold">1.5 роки тверезості</div>
-        </div>
-      </div>
-      
-      <!-- Story 3 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card-custom bg-secondary border-0 text-white h-100">
-          <div class="testimonial-avatar mx-auto mb-4">
-            <img src="https://via.placeholder.com/100x100/f093fb/ffffff?text=ST" alt="Семен" class="rounded-circle w-100 h-100 object-fit-cover">
-          </div>
-          <h3 class="h5 fw-bold mb-3">Батько Семен</h3>
-          <p class="text-muted mb-3">"Сину було 19, коли ми зрозуміли масштаб проблеми. Зараз йому 22 - він відповідальний, працює, допомагає іншим."</p>
-          <div class="text-accent fw-semibold">3 роки тверезості</div>
-        </div>
-      </div>
+
+      <!-- Navigation Buttons -->
+      <button id="storiesPrev" class="position-absolute top-50 start-0 translate-middle-y bg-white rounded-circle p-3 shadow-lg border-0 z-3" style="left: -20px;">
+        <i class="bi bi-chevron-left text-dark"></i>
+      </button>
+      <button id="storiesNext" class="position-absolute top-50 end-0 translate-middle-y bg-white rounded-circle p-3 shadow-lg border-0 z-3" style="right: -20px;">
+        <i class="bi bi-chevron-right text-dark"></i>
+      </button>
+    </div>
+
+    <!-- Consultation Button -->
+    <div class="text-center mt-5">
+      <a href="https://t.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="btn-primary-custom">
+        <i class="bi bi-telegram me-2"></i>
+        Записатися на консультацію
+      </a>
     </div>
   </div>
 </section>
+
+<!-- Story Modal -->
+<div class="modal fade" id="storyModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 rounded-3">
+      <div class="modal-header border-0 pb-0 position-relative">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 p-md-5">
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Documentary Films Section -->
 <section class="section-spacing">
@@ -636,57 +709,7 @@
   </div>
 </section>
 
-<!-- Donation Section -->
-<section id="donation" class="section-spacing bg-accent text-white rounded-3">
-  <div class="container">
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-10 text-center">
-        <h2 class="display-5 fw-bold mb-4">🤝 Як підтримати роботу центру</h2>
-        <p class="fs-5">Ми не є бізнесом і не клінікою. Ми - спільнота людей, які допомагають одне одному повернутися до життя.</p>
-      </div>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="card-custom bg-white text-dark">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-8">
-              <p class="fs-5 mb-4">
-                У Центрі «Джерело» щодня відбуваються тихі, але справжні перемоги.
-                Юнаки та дівчата, які ще вчора були на межі - сьогодні проходять реабілітацію, отримують підтримку, починають нове життя без залежності. Але зміни - потребують ресурсу.
-              </p>
-              
-              <div class="mb-4">
-                <p class="fw-bold mb-3">Кожна ваша гривня - це:</p>
-                <ul class="fs-5 text-muted">
-                  <li class="mb-2">– тепле ліжко для хлопця, який втік з вулиці;</li>
-                  <li class="mb-2">– консультація психолога для мами, яка не знає, як врятувати сина;</li>
-                  <li class="mb-2">– їжа, ліки, одяг, навчальні матеріали;</li>
-                  <li class="mb-2">– шанс повернутись у суспільство з гідністю.</li>
-                </ul>
-              </div>
-              
-              <div class="bg-accent-light rounded-3 p-4 mb-4">
-                <p class="fw-bold text-accent mb-2">🆘 Ми не фінансуємось державою.</p>
-                <p class="text-muted mb-0">Ми тримаємось завдяки тим, хто вірить, що людське життя - варте підтримки.</p>
-              </div>
-              
-              <p class="fs-5 fw-semibold">Ваша допомога = чиясь тверезість, чиясь друга спроба, чиясь перемога.</p>
-            </div>
-            
-            <div class="col-lg-4 text-center">
-              <div class="bg-light rounded-3 p-4 mb-4">
-                <img src="https://drive.google.com/uc?export=view&id=1lEQbZn4MHcEjRM3D0rya9NoJe4tNqsmG" alt="QR код для донату" class="img-fluid mb-3">
-                <p class="fw-bold text-accent mb-2">Зробіть донат прямо зараз.</p>
-                <p class="text-muted small">Це просто. Це чесно. Це має значення.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- Photo Gallery Section -->
 <section class="section-spacing">
@@ -719,51 +742,132 @@
 </section>
 
 <!-- Team Section -->
-<section id="team" class="section-spacing bg-light rounded-3">
-  <div class="container">
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-8 text-center">
-        <h2 class="display-5 fw-bold mb-4">Наша команда</h2>
-        <p class="fs-5 text-muted">Професіонали, які пройшли шлях змін і готові допомогти вам</p>
-      </div>
+<!-- Team Section -->
+<section id="team" class="section-spacing bg-white">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 text-center">
+                <h2 class="display-5 fw-bold mb-4 text-accent" data-ua="Наша команда" data-ru="Наша команда">
+                    Наша команда
+                </h2>
+                <p class="fs-5 text-muted" data-ua="Професіонали, які пройшли шлях змін і готові допомогти вам" data-ru="Профессионалы, которые прошли путь изменений и готовы помочь вам">
+                    Професіонали, які пройшли шлях змін і готові допомогти вам
+                </p>
+            </div>
+        </div>
+
+        <div class="position-relative">
+            <div class="overflow-hidden">
+                <div id="teamTrack" class="row flex-nowrap g-4 transition-all" style="transition: transform 0.5s ease-in-out;">
+                    <!-- Team Member 1 -->
+                    <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+                        <div class="card-custom h-100 text-center">
+                            <div class="mb-4 overflow-hidden rounded-3">
+                                <img src="https://ninarkotikam.com/wp-content/uploads/2024/03/photo_2025-08-15-11.53.49-570x696.jpeg" alt="Казар'ян Павло" class="w-100" style="height: 280px; object-fit: cover;">
+                            </div>
+                            <h3 class="h5 fw-bold mb-2 text-accent">Казарʼян Павло Ашотович</h3>
+                            <p class="text-muted small mb-2">Психолог, психотерапевт</p>
+                            <p class="text-muted small mb-0">
+                                Керівник реабілітаційного центру
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+                        <div class="card-custom h-100 text-center">
+                            <div class="mb-4 overflow-hidden rounded-3">
+                                <img src="https://ninarkotikam.com/wp-content/uploads/2022/12/IMG_9363-570x696.jpg" alt="Светова Ірина" class="w-100" style="height: 280px; object-fit: cover;">
+                            </div>
+                            <h3 class="h5 fw-bold mb-2 text-accent">Светова Ірина</h3>
+                            <p class="text-muted small mb-2">Психолог-консультант</p>
+                            <p class="text-muted small mb-0">
+                                &nbsp;
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+                        <div class="card-custom h-100 text-center">
+                            <div class="mb-4 overflow-hidden rounded-3">
+                                <img src="https://ninarkotikam.com/wp-content/uploads/2024/03/IMG_9337-570x696.jpg" alt="Шалімов Руслан" class="w-100" style="height: 280px; object-fit: cover;">
+                            </div>
+                            <h3 class="h5 fw-bold mb-2 text-accent">Шалімов Руслан</h3>
+                            <p class="text-muted small mb-2">Психолог-консультант</p>
+                            <p class="text-muted small mb-0">
+                                &nbsp;
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+                        <div class="card-custom h-100 text-center">
+                            <div class="mb-4 overflow-hidden rounded-3">
+                                <img src="https://ninarkotikam.com/wp-content/uploads/2024/03/IMG_9231-570x696.jpg" alt="Шапаренко Григорій" class="w-100" style="height: 280px; object-fit: cover;">
+                            </div>
+                            <h3 class="h5 fw-bold mb-2 text-accent">Шапаренко Григорій</h3>
+                            <p class="text-muted small mb-2">Психолог-консультант</p>
+                            <p class="text-muted small mb-0">
+                                &nbsp;
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 5 -->
+                    <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+                        <div class="card-custom h-100 text-center">
+                            <div class="mb-4 overflow-hidden rounded-3">
+                                <img src="https://ninarkotikam.com/wp-content/uploads/2024/03/IMG_9352-570x696.jpg" alt="Миколаєва Наталія" class="w-100" style="height: 280px; object-fit: cover;">
+                            </div>
+                            <h3 class="h5 fw-bold mb-2 text-accent">Миколаєва Наталія</h3>
+                            <p class="text-muted small mb-2">Вчитель вікового мистецтва</p>
+                            <p class="text-muted small mb-0">
+                                Керівник творчого блоку, Психолог
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 6 -->
+                    <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+                        <div class="card-custom h-100 text-center">
+                            <div class="mb-4 overflow-hidden rounded-3">
+                                <img src="https://ninarkotikam.com/wp-content/uploads/2024/03/IMG_9362-570x696.jpg" alt="Припутиєва Аріна" class="w-100" style="height: 280px; object-fit: cover;">
+                            </div>
+                            <h3 class="h5 fw-bold mb-2 text-accent">Припутиєва Аріна</h3>
+                            <p class="text-muted small mb-2">Вчитель наук, мистецтва та юних митців</p>
+                            <p class="text-muted small mb-0">
+                                &nbsp;
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 7 -->
+                    <div class="col-12 col-sm-6 col-lg-3 flex-shrink-0">
+                        <div class="card-custom h-100 text-center">
+                            <div class="mb-4 overflow-hidden rounded-3">
+                                <img src="https://ninarkotikam.com/wp-content/uploads/2024/03/IMG_9361-570x696.jpg" alt="Невєнчаний Юрій" class="w-100" style="height: 280px; object-fit: cover;">
+                            </div>
+                            <h3 class="h5 fw-bold mb-2 text-accent">Невєнчаний Юрій</h3>
+                            <p class="text-muted small mb-2">Представник бойового мистецтва</p>
+                            <p class="text-muted small mb-0">
+                                &nbsp;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button id="teamPrev" class="position-absolute top-50 start-0 translate-middle-y bg-white rounded-circle p-3 shadow-lg border-0 z-3" style="left: -20px;">
+                <i class="bi bi-chevron-left text-dark"></i>
+            </button>
+            <button id="teamNext" class="position-absolute top-50 end-0 translate-middle-y bg-white rounded-circle p-3 shadow-lg border-0 z-3" style="right: -20px;">
+                <i class="bi bi-chevron-right text-dark"></i>
+            </button>
+        </div>
     </div>
-    
-    <div class="row g-4">
-      <!-- Team Member 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card-custom text-center h-100">
-          <img src="https://ninarkotikam.com/wp-content/uploads/2025/08/IMG_5232-200x300.jpg" alt="Павло Казар'ян" class="rounded-circle mx-auto mb-4" style="width: 150px; height: 150px; object-fit: cover;">
-          <h3 class="h5 fw-bold mb-2">Павло Казар'ян</h3>
-          <p class="text-accent fw-semibold mb-3">Засновник, психолог</p>
-          <p class="text-muted">20+ років досвіду роботи з залежностями. Автор програм реабілітації.</p>
-        </div>
-      </div>
-      
-      <!-- Team Member 2 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card-custom text-center h-100">
-          <div class="bg-accent-light rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
-            <i class="bi bi-person-fill fs-1 text-accent"></i>
-          </div>
-          <h3 class="h5 fw-bold mb-2">Олена Петренко</h3>
-          <p class="text-accent fw-semibold mb-3">Психолог, арт-терапевт</p>
-          <p class="text-muted">Спеціалізується на роботі з травмами та творчому самовираженні.</p>
-        </div>
-      </div>
-      
-      <!-- Team Member 3 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card-custom text-center h-100">
-          <div class="bg-accent-light rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
-            <i class="bi bi-person-fill fs-1 text-accent"></i>
-          </div>
-          <h3 class="h5 fw-bold mb-2">Андрій Коваленко</h3>
-          <p class="text-accent fw-semibold mb-3">Коуч, тренер</p>
-          <p class="text-muted">Допомагає у постановці цілей та розвитку навичок життя без залежностей.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- Approach Section -->
@@ -831,140 +935,178 @@
     </div>
   </div>
 </section>
+ <!-- Footer -->
+<footer class="py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <img src="https://ninarkotikam.com/wp-content/uploads/2025/08/logo_n1-240x300.png" alt="Павло Казар'ян" class="mb-3" style="max-height: 80px;">
+        <h3 class="h4 fw-bold mb-3">Джерело</h3>
+        <p class="text-light mb-4">Центр реабілітації з 19-річним досвідом допомоги людям змінити своє життя.</p>
+        <div class="d-flex gap-3">
+          <a href="https://www.youtube.com/@ninarkotikam" target="_blank" class="text-white fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.facebook.com/ninarkotikam" target="_blank" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/djerelo.help" target="_blank" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="https://t.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="text-white fs-5"><i class="bi bi-telegram"></i></a>
+          <a href="https://www.tiktok.com/@ninarkotikam" target="_blank" class="text-white fs-5"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <h4 class="h5 fw-bold mb-4">Навігація</h4>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#home" class="text-light text-decoration-none hover-text-accent">Головна</a></li>
+          <li class="mb-2"><a href="#about" class="text-light text-decoration-none hover-text-accent">Про центр</a></li>
+          <li class="mb-2"><a href="#programs" class="text-light text-decoration-none hover-text-accent">Програми</a></li>
+          <li class="mb-2"><a href="#methods" class="text-light text-decoration-none hover-text-accent">Методи</a></li>
+          <li class="mb-2"><a href="#results" class="text-light text-decoration-none hover-text-accent">Результати</a></li>
+          <li><a href="#contact" class="text-light text-decoration-none hover-text-accent">Контакти</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5 fw-bold mb-4">Контакти</h4>
+        <ul class="list-unstyled text-light">
+          <li class="mb-2">+38 (099) 258-74-84</li>
+          <li class="mb-2">ninarkotikam@ukr.net</li>
+          <li class="mb-2">село Погреби, вул. Космічна, 8А</li>
+          <li>Київська обл., Обухівський р-н</li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4 class="h5 fw-bold mb-4">Документи</h4>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="privacy.html" class="text-light text-decoration-none hover-text-accent">Політика конфіденційності</a></li>
+          <li class="mb-2"><a href="terms.html" class="text-light text-decoration-none hover-text-accent">Умови користування</a></li>
+          <li><a href="disclaimer.html" class="text-light text-decoration-none hover-text-accent">Відмова від відповідальності</a></li>
+        </ul>
+      </div>
+    </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section-spacing bg-accent text-white rounded-3">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <h2 class="display-5 fw-bold text-center mb-5">Зв'яжіться з нами</h2>
-          
-          <div class="row g-5">
-            <div class="col-lg-6">
-              <h3 class="h4 fw-bold mb-4">Контактна інформація</h3>
-              <div class="fs-5">
-                <div class="d-flex align-items-center mb-4">
-                  <i class="bi bi-telephone-fill me-3 fs-4"></i>
-                  <div>
-                    <p class="mb-1 fw-semibold">Телефон:</p>
-                    <p class="mb-0">+38 (099) 258-74-84</p>
-                  </div>
+    <!-- Legal Documentation Section -->
+    <div class="border-top border-secondary mt-5 pt-4">
+      <button 
+        id="legalDocsToggle" 
+        class="w-100 w-md-auto bg-accent text-white px-4 py-3 rounded fw-semibold transition d-flex align-items-center justify-content-center gap-2 mx-auto border-0 mb-4"
+        onclick="toggleLegalDocs()"
+      >
+        <i class="bi bi-files"></i>
+        <span>Юридична інформація</span>
+        <i id="chevronIcon" class="bi bi-chevron-down transition"></i>
+      </button>
+      
+      <div id="legalDocsContent" class="mt-3" style="display: none;">
+        <!-- Legal Info -->
+        <div class="card-custom bg-dark border border-secondary mb-4">
+          <h3 class="h4 fw-bold text-center mb-4 text-accent">Юридична інформація</h3>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <p class="mb-3 text-light"><strong>Повна назва:</strong> Громадська організація "Центр Джерело"</p>
+              <p class="mb-3 text-light"><strong>ЄДРПОУ:</strong> 35328109</p>
+              <p class="mb-0 text-light"><strong>Адреса:</strong> Україна, 08637, Київська обл., Обухівський р-н, село Погреби, вул. Космічна, будинок 8А</p>
+            </div>
+            <div class="col-md-6">
+              <p class="mb-3 text-light"><strong>Керівник:</strong> Казар'ян Павло Ашотович</p>
+              <p class="mb-3 text-light"><strong>Тип організації:</strong> Неприбуткова громадська організація</p>
+              <p class="mb-0 text-light"><strong>Дата реєстрації:</strong> 14.07.2008</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Explanation Block -->
+        <div class="bg-primary bg-opacity-10 border-start border-4 border-primary p-4 rounded mb-4">
+          <h4 class="h5 fw-bold mb-3 d-flex align-items-center gap-2 text-light">
+            <i class="bi bi-info-circle text-primary"></i>
+            Чому ми не потребуємо ліцензії?
+          </h4>
+          <p class="text-light mb-3">
+            ГО «Центр Джерело» не потребує ліцензії, оскільки діяльність, яку ми здійснюємо (надання психологічної допомоги та організація груп самодопомоги), відповідно до чинного законодавства України не підпадає під перелік видів діяльності, що підлягають обов'язковому ліцензуванню.
+          </p>
+          <p class="text-light opacity-75 small">
+            Це означає, що для роботи у цих сферах не потрібен дозвіл від державних органів.
+          </p>
+          <a 
+            href="https://zakon.rada.gov.ua/rada/show/v8071563-06" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="d-inline-flex align-items-center gap-2 mt-3 text-accent text-decoration-none fw-semibold"
+          >
+            <span>Переглянути закон про ліцензування</span>
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- Documents Grid -->
+        <div class="row g-4 mb-4">
+          <!-- Document 1: Витяг з реєстру -->
+          <div class="col-md-6">
+            <a 
+              href="https://drive.google.com/file/d/1N_KyU72fz_6FsEC2QIoWC82OMYwbRJwc/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="card-custom text-decoration-none h-100 d-block bg-dark border border-secondary hover-lift"
+            >
+              <div class="d-flex align-items-start gap-3">
+                <div class="icon-circle bg-accent text-white">
+                  <i class="bi bi-file-earmark-check"></i>
                 </div>
-                <div class="d-flex align-items-center mb-4">
-                  <i class="bi bi-envelope-fill me-3 fs-4"></i>
-                  <div>
-                    <p class="mb-1 fw-semibold">Email:</p>
-                    <p class="mb-0">ninarkotikam@ukr.net</p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                  <i class="bi bi-telegram me-3 fs-4"></i>
-                  <div>
-                    <p class="mb-1 fw-semibold">Telegram:</p>
-                    <a href="https://t.me/ninarkotikam_bot" class="text-white">@ninarkotikam_bot</a>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                  <i class="bi bi-globe me-3 fs-4"></i>
-                  <div>
-                    <p class="mb-1 fw-semibold">Сайт:</p>
-                    <a href="https://ninarkotikam.com" class="text-white">ninarkotikam.com</a>
-                  </div>
-                </div>
-                <div class="d-flex align-items-start">
-                  <i class="bi bi-geo-alt-fill me-3 fs-4 mt-1"></i>
-                  <div>
-                    <p class="mb-1 fw-semibold">Адреса:</p>
-                    <p class="mb-0">Україна, 08637, Київська обл., Обухівський р-н, село Погреби, вул. Космічна, будинок 8А</p>
-                  </div>
+                <div class="flex-grow-1">
+                  <h5 class="fw-bold mb-2 text-light">Витяг з Державного реєстру</h5>
+                  <p class="text-light opacity-75 small mb-3">Офіційний документ, що підтверджує реєстрацію організації в Державному реєстрі України</p>
+                  <span class="text-accent fw-semibold small d-flex align-items-center gap-1">
+                    Відкрити документ
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
                 </div>
               </div>
-            </div>
-            
-            <div class="col-lg-6">
-              <form class="bg-white rounded-3 p-4 text-dark">
-                <div class="mb-3">
-                  <label class="form-label fw-semibold">Ім'я *</label>
-                  <input type="text" class="form-control" required placeholder="Введіть ваше ім'я">
-                </div>
-                <div class="mb-3">
-                  <label class="form-label fw-semibold">Телефон *</label>
-                  <input type="tel" class="form-control" required placeholder="+380">
-                </div>
-                <div class="mb-3">
-                  <label class="form-label fw-semibold">Email</label>
-                  <input type="email" class="form-control" placeholder="your@email.com">
-                </div>
-                <div class="mb-4">
-                  <label class="form-label fw-semibold">Коментар</label>
-                  <textarea class="form-control" rows="4" placeholder="Розкажіть, чим ми можемо допомогти"></textarea>
-                </div>
-                <button type="submit" class="btn-primary-custom w-100 mb-3">Записатись на консультацію</button>
-                <p class="text-muted small text-center">
-                  Натискаючи кнопку, ви погоджуєтесь з <a href="#" onclick="openPrivacyModal(); return false;">політикою конфіденційності</a>, 
-                  <a href="#" onclick="openTermsModal(); return false;">умовами користування</a> та <a href="#" onclick="openDisclaimerModal(); return false;">відмовою від відповідальності</a>
-                </p>
-              </form>
-            </div>
+            </a>
           </div>
+
+          <!-- Document 2: Статут -->
+          <div class="col-md-6">
+            <a 
+              href="https://drive.google.com/file/d/1HKcmhizCKl69AAgTCp5oX6-eEPGx5Qyg/view?usp=drive_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="card-custom text-decoration-none h-100 d-block bg-dark border border-secondary hover-lift"
+            >
+              <div class="d-flex align-items-start gap-3">
+                <div class="icon-circle bg-accent text-white">
+                  <i class="bi bi-journal-text"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h5 class="fw-bold mb-2 text-light">Статут організації</h5>
+                  <p class="text-light opacity-75 small mb-3">Повний статут ГО «Центр Джерело» з усіма положеннями та правилами діяльності</p>
+                  <span class="text-accent fw-semibold small d-flex align-items-center gap-1">
+                    Відкрити документ
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Additional Legal Info -->
+        <div class="p-4 bg-dark bg-opacity-50 rounded-3 border border-secondary">
+          <h5 class="fw-semibold mb-3 d-flex align-items-center gap-2 text-accent">
+            <i class="bi bi-info-circle"></i>
+            Додаткова інформація
+          </h5>
+          <ul class="list-unstyled text-light small mb-0">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Всі документи доступні для перегляду в будь-який час</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Організація зареєстрована відповідно до законодавства України</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Діяльність здійснюється в межах, визначених Статутом</li>
+            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Для отримання додаткової інформації звертайтесь за контактами вище</li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark text-white">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-4">
-          <img src="https://ninarkotikam.com/wp-content/uploads/2025/08/logo_n1-240x300.png" alt="Павло Казар'ян" class="mb-3" style="max-height: 80px;">
-          <h3 class="h4 fw-bold mb-3">Джерело</h3>
-          <p class="text-muted mb-4">Центр реабілітації з 19-річним досвідом допомоги людям змінити своє життя.</p>
-          <div class="d-flex gap-3">
-            <a href="https://www.youtube.com/@ninarkotikam" target="_blank" class="text-white fs-5"><i class="bi bi-youtube"></i></a>
-            <a href="https://www.facebook.com/ninarkotikam" target="_blank" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/ninarkotikam" target="_blank" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
-            <a href="https://t.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="text-white fs-5"><i class="bi bi-telegram"></i></a>
-            <a href="https://www.tiktok.com/@ninarkotikam" target="_blank" class="text-white fs-5"><i class="bi bi-tiktok"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-2">
-          <h4 class="h5 fw-bold mb-4">Навігація</h4>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#home" class="text-muted text-decoration-none">Головна</a></li>
-            <li class="mb-2"><a href="#about" class="text-muted text-decoration-none">Про центр</a></li>
-            <li class="mb-2"><a href="#programs" class="text-muted text-decoration-none">Програми</a></li>
-            <li class="mb-2"><a href="#methods" class="text-muted text-decoration-none">Методи</a></li>
-            <li class="mb-2"><a href="#results" class="text-muted text-decoration-none">Результати</a></li>
-            <li><a href="#contact" class="text-muted text-decoration-none">Контакти</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3">
-          <h4 class="h5 fw-bold mb-4">Контакти</h4>
-          <ul class="list-unstyled text-muted">
-            <li class="mb-2">+38 (099) 258-74-84</li>
-            <li class="mb-2">ninarkotikam@ukr.net</li>
-            <li class="mb-2">село Погреби, вул. Космічна, 8А</li>
-            <li>Київська обл., Обухівський р-н</li>
-          </ul>
-        </div>
-        <div class="col-lg-3">
-          <h4 class="h5 fw-bold mb-4">Документи</h4>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" onclick="openPrivacyModal(); return false;" class="text-muted text-decoration-none">Політика конфіденційності</a></li>
-            <li class="mb-2"><a href="#" onclick="openTermsModal(); return false;" class="text-muted text-decoration-none">Умови користування</a></li>
-            <li><a href="#" onclick="openDisclaimerModal(); return false;" class="text-muted text-decoration-none">Відмова від відповідальності</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="border-top border-secondary mt-5 pt-4 text-center">
-        <p class="mb-2">© 2008-2025 Громадська організація "Центр Джерело". ЄДРПОУ: 35328109</p>
-        <p class="text-muted small">Неприбуткова організація. Не є медичним закладом.</p>
-      </div>
+    
+    <div class="border-top border-secondary mt-4 pt-4 text-center">
+      <p class="mb-2 text-light">© 2008-2025 Громадська організація "Центр Джерело". ЄДРПОУ: 35328109</p>
+      <p class="text-light opacity-75 small">Неприбуткова організація. Не є медичним закладом.</p>
     </div>
-  </footer>
-
+  </div>
+</footer>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
@@ -982,19 +1124,22 @@
   })(document, window, 'script');
   </script> 
 <script>
-    // Media Carousel Functionality
+// Media Carousel Functionality
 document.addEventListener('DOMContentLoaded', function() {
-  const mediaTrack = document.getElementById('mediaTrack');
-  const mediaPrev = document.getElementById('mediaPrev');
-  const mediaNext = document.getElementById('mediaNext');
-  
-  if (mediaTrack && mediaPrev && mediaNext) {
+  // Функция для инициализации карусели
+  function initCarousel(trackId, prevId, nextId) {
+    const track = document.getElementById(trackId);
+    const prev = document.getElementById(prevId);
+    const next = document.getElementById(nextId);
+    
+    if (!track || !prev || !next) return;
+    
     let currentPosition = 0;
     let cardWidth = 0;
     let cardsToShow = 1;
     
     function updateCardWidth() {
-      const cards = mediaTrack.querySelectorAll('.flex-shrink-0');
+      const cards = track.querySelectorAll('.flex-shrink-0');
       if (cards.length > 0) {
         // Определяем сколько карточек показывать в зависимости от ширины экрана
         if (window.innerWidth >= 992) {
@@ -1013,11 +1158,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function moveCarousel() {
-      mediaTrack.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+      track.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
     }
     
     function nextSlide() {
-      const totalCards = mediaTrack.querySelectorAll('.flex-shrink-0').length;
+      const totalCards = track.querySelectorAll('.flex-shrink-0').length;
       const maxPosition = totalCards - cardsToShow;
       
       if (currentPosition < maxPosition) {
@@ -1038,8 +1183,8 @@ document.addEventListener('DOMContentLoaded', function() {
     moveCarousel();
     
     // События
-    mediaNext.addEventListener('click', nextSlide);
-    mediaPrev.addEventListener('click', prevSlide);
+    next.addEventListener('click', nextSlide);
+    prev.addEventListener('click', prevSlide);
     
     // Ресайз
     window.addEventListener('resize', function() {
@@ -1051,11 +1196,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let startX = 0;
     let endX = 0;
     
-    mediaTrack.addEventListener('touchstart', function(e) {
+    track.addEventListener('touchstart', function(e) {
       startX = e.touches[0].clientX;
     });
     
-    mediaTrack.addEventListener('touchend', function(e) {
+    track.addEventListener('touchend', function(e) {
       endX = e.changedTouches[0].clientX;
       handleSwipe();
     });
@@ -1073,7 +1218,100 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
+  
+  // Инициализируем обе карусели
+  initCarousel('mediaTrack', 'mediaPrev', 'mediaNext');
+  initCarousel('storiesTrack', 'storiesPrev', 'storiesNext');
+  initCarousel('teamTrack', 'teamPrev', 'teamNext');
 });
+
+// Stories Data
+const stories = [
+    {
+        name: 'Батько Вікторії',
+        subtitle: 'Сім\'я з надією',
+        title: 'Випадкова зупинка і новий шанс на життя',
+        image: 'https://ninarkotikam.com/wp-content/uploads/2023/10/photo_2025-08-14_03-44-11-300x246.jpg',
+        content: `
+            <div class="d-flex align-items-start mb-4">
+                <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/photo_2025-08-14_03-44-11-300x246.jpg" alt="Батько Вікторії" class="rounded-circle me-4 flex-shrink-0" style="width: 80px; height: 80px; object-fit: cover;">
+                <div>
+                    <h4 class="h5 fw-bold text-accent mb-1">Батько Вікторії</h4>
+                    <p class="text-muted small mb-0">Сім'я з надією</p>
+                </div>
+            </div>
+            <h3 class="h4 fw-bold mb-4 text-dark">Випадкова зупинка і новий шанс на життя</h3>
+            <div class="text-muted">
+                <p class="mb-3">Зовсім випадково я побачив оголошення про Центр ресоціалізації наркозалежної молоді «Джерело» на трамвайній зупинці. Моя донька вже кілька років страждала від наркозалежності, і ми майже втратили надію.</p>
+                <p class="mb-3">Дружина подзвонила в Центр, хоча до цього ми вже тричі проходили інші реабілітаційні програми. Коли ми приїхали – нас зустріли з теплотою, по-людськи. Атмосфера Центру, відношення персоналу – все дало надію.</p>
+            </div>
+        `
+    },
+    {
+        name: 'Мама Валерія',
+        subtitle: 'Порятунок від трамадолу',
+        title: 'Як програма "Джерело" врятувала мого сина',
+        image: 'https://ninarkotikam.com/wp-content/uploads/2023/10/photo_2025-08-14_04-03-53-300x169.jpg',
+        content: `
+            <div class="d-flex align-items-start mb-4">
+                <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/photo_2025-08-14_04-03-53-300x169.jpg" alt="Мама Валерія" class="rounded-circle me-4 flex-shrink-0" style="width: 80px; height: 80px; object-fit: cover;">
+                <div>
+                    <h4 class="h5 fw-bold text-accent mb-1">Мама Валерія</h4>
+                    <p class="text-muted small mb-0">Порятунок від трамадолу</p>
+                </div>
+            </div>
+            <h3 class="h4 fw-bold mb-4 text-dark">Як програма "Джерело" врятувала мого сина</h3>
+            <div class="text-muted">
+                <p class="mb-3">Коли я нарешті усвідомила, що мій син став залежним від трамадолу, було вже пізно: він не міг прожити без нього і дня. Розмови, умовляння, погрози – ніщо не допомагало.</p>
+                <p class="mb-3">Я зверталася до багатьох реабілітаційних центрів, але скрізь обіцяли «зняти фізичну залежність» за великі гроші. Я ж розуміла: якщо не змінити внутрішні установки, дитина повернеться до наркотиків.</p>
+            </div>
+        `
+    },
+    // Добавьте остальные истории по аналогии
+];
+
+// Story Modal Functions
+function openStoryModal(index) {
+    const story = stories[index];
+    const modalContent = document.getElementById('modalContent');
+    
+    if (modalContent && story) {
+        modalContent.innerHTML = story.content;
+        
+        // Используем Bootstrap modal
+        const modal = new bootstrap.Modal(document.getElementById('storyModal'));
+        modal.show();
+    }
+}
+
+// Инициализация карусели (добавьте в существующий скрипт)
+document.addEventListener('DOMContentLoaded', function() {
+    // ... существующий код инициализации каруселей ...
+    initCarousel('storiesTrack', 'storiesPrev', 'storiesNext');
+});
+function closeStoryModal() {
+    const modal = bootstrap.Modal.getInstance(document.getElementById('storyModal'));
+    if (modal) {
+        modal.hide();
+    }
+}
+// Toggle Legal Documentation
+function toggleLegalDocs() {
+    const content = document.getElementById('legalDocsContent');
+    const chevron = document.getElementById('chevronIcon');
+    
+    if (content.style.display === 'none' || !content.style.display) {
+        content.style.display = 'block';
+        chevron.classList.remove('bi-chevron-down');
+        chevron.classList.add('bi-chevron-up');
+    } else {
+        content.style.display = 'none';
+        chevron.classList.remove('bi-chevron-up');
+        chevron.classList.add('bi-chevron-down');
+    }
+}
+
+window.toggleLegalDocs = toggleLegalDocs;
 </script>
 </body>
 </html>

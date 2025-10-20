@@ -512,3 +512,52 @@ html {
     padding: 0.75rem 1.5rem !important;
   }
 }
+/* Стили для карточек историй */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.card-custom {
+  transition: all 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Адаптивность для модального окна */
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 1rem;
+  }
+  
+  .col-12.col-sm-6.col-lg-3.flex-shrink-0 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .col-12.col-sm-6.col-lg-3.flex-shrink-0 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-12.col-sm-6.col-lg-3.flex-shrink-0 {
+    width: 25%;
+  }
+}
+/* Footer Styles */
+.hover-text-accent:hover {
+    color: #1C8E8E !important;
+}
+
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
