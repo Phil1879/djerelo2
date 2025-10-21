@@ -718,40 +718,92 @@
   </div>
 </section>
 
-
-
 <!-- Photo Gallery Section -->
-
-<!-- <section class="section-spacing">
+<section class="section-spacing bg-gradient-light">
   <div class="container">
     <div class="row justify-content-center mb-5">
       <div class="col-lg-8 text-center">
-        <h2 class="display-5 fw-bold mb-4">Фотогалерея</h2>
+        <h2 class="display-5 fw-bold mb-4 text-accent">Фотогалерея</h2>
         <p class="fs-5 text-muted">Моменти життя в Центрі «Джерело»</p>
       </div>
     </div>
-    
-    <div class="row g-3">
-      <div class="col-md-4">
-        <img src="https://ninarkotikam.com/wp-content/uploads/2025/08/photo_2025-08-14_00-27-09-400x300.jpg" alt="Заняття в центрі" class="rounded-3 w-100 h-100 object-fit-cover" style="height: 250px;">
+
+    <div class="position-relative">
+      <div class="overflow-hidden">
+        <div id="galleryTrack" class="row flex-nowrap g-4 transition-all" style="transition: transform 0.5s ease-in-out;">
+          <!-- Photo 1 -->
+          <div class="col-12 col-sm-6 col-lg-4 flex-shrink-0">
+            <div class="card-custom h-100 p-0 overflow-hidden">
+              <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/DSC_0225.packed-e1697083343365-410x308.webp" 
+                   alt="Заняття в центрі" 
+                   class="w-100 h-100 object-fit-cover" 
+                   style="height: 300px;">
+            </div>
+          </div>
+
+          <!-- Photo 2 -->
+          <div class="col-12 col-sm-6 col-lg-4 flex-shrink-0">
+            <div class="card-custom h-100 p-0 overflow-hidden">
+              <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/DSCN0451-e1697083102239-410x308.webp" 
+                   alt="Групова терапія" 
+                   class="w-100 h-100 object-fit-cover" 
+                   style="height: 300px;">
+            </div>
+          </div>
+
+          <!-- Photo 3 -->
+          <div class="col-12 col-sm-6 col-lg-4 flex-shrink-0">
+            <div class="card-custom h-100 p-0 overflow-hidden">
+              <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/P2030123.packed-410x308.webp" 
+                   alt="Індивідуальна консультація" 
+                   class="w-100 h-100 object-fit-cover" 
+                   style="height: 300px;">
+            </div>
+          </div>
+
+          <!-- Photo 4 -->
+          <div class="col-12 col-sm-6 col-lg-4 flex-shrink-0">
+            <div class="card-custom h-100 p-0 overflow-hidden">
+              <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/PA210687-scaled-e1697083130734-410x308.webp" 
+                   alt="Творчі заняття" 
+                   class="w-100 h-100 object-fit-cover" 
+                   style="height: 300px;">
+            </div>
+          </div>
+
+          <!-- Photo 5 -->
+          <div class="col-12 col-sm-6 col-lg-4 flex-shrink-0">
+            <div class="card-custom h-100 p-0 overflow-hidden">
+              <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/SAM_0811.packed-e1697083160223-410x308.webp" 
+                   alt="Спільні заходи" 
+                   class="w-100 h-100 object-fit-cover" 
+                   style="height: 300px;">
+            </div>
+          </div>
+
+          <!-- Photo 6 - можно добавить еще фото если есть -->
+          <div class="col-12 col-sm-6 col-lg-4 flex-shrink-0">
+            <div class="card-custom h-100 p-0 overflow-hidden">
+              <img src="https://ninarkotikam.com/wp-content/uploads/2023/10/%D0%BA%D0%B2%D0%B8%D0%BD-%D0%BC%D0%B5%D1%80%D0%B8-%D0%BA%D1%80%D1%83%D0%B8%D0%B7-119-scaled-e1697083175618-410x308.webp" 
+                   alt="Додаткове фото" 
+                   class="w-100 h-100 object-fit-cover" 
+                   style="height: 300px;">
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <img src="https://ninarkotikam.com/wp-content/uploads/2025/08/IMG_7310-400x300.jpg" alt="Групова терапія" class="rounded-3 w-100 h-100 object-fit-cover" style="height: 250px;">
-      </div>
-      <div class="col-md-4">
-        <img src="https://ninarkotikam.com/wp-content/uploads/2025/08/IMG_5232-400x300.jpg" alt="Індивідуальна консультація" class="rounded-3 w-100 h-100 object-fit-cover" style="height: 250px;">
-      </div>
-      <div class="col-md-6">
-        <img src="https://ninarkotikam.com/wp-content/uploads/2025/10/IMG_9062-600x300.png" alt="Творчі заняття" class="rounded-3 w-100 h-100 object-fit-cover" style="height: 250px;">
-      </div>
-      <div class="col-md-6">
-        <img src="https://via.placeholder.com/600x300/667eea/ffffff?text=Спільні+заходи" alt="Спільні заходи" class="rounded-3 w-100 h-100 object-fit-cover" style="height: 250px;">
-      </div>
+
+      <!-- Navigation Buttons -->
+      <button id="galleryPrev" class="position-absolute top-50 start-0 translate-middle-y bg-white rounded-circle p-3 shadow-lg border-0 z-3" style="left: -20px;">
+        <i class="bi bi-chevron-left text-dark"></i>
+      </button>
+      <button id="galleryNext" class="position-absolute top-50 end-0 translate-middle-y bg-white rounded-circle p-3 shadow-lg border-0 z-3" style="right: -20px;">
+        <i class="bi bi-chevron-right text-dark"></i>
+      </button>
     </div>
   </div>
-</section> -->
+</section>
 
-<!-- Team Section -->
 <!-- Team Section -->
 <section id="team" class="section-spacing bg-white">
     <div class="container">
@@ -889,7 +941,7 @@
         <div class="row g-4">
           <div class="col-md-6 col-lg-3">
             <div class="card-custom text-center h-100">
-              <div class="icon-circle bg-accent text-white mx-auto mb-4">
+              <div class="icon-circle bg-accent text-accent mx-auto mb-4">
                 <i class="bi bi-puzzle-fill"></i>
               </div>
               <h3 class="h5 fw-bold mb-3">Інтегративний підхід</h3>
@@ -899,7 +951,7 @@
           
           <div class="col-md-6 col-lg-3">
             <div class="card-custom text-center h-100">
-              <div class="icon-circle bg-accent text-white mx-auto mb-4">
+              <div class="icon-circle bg-accent text-accent mx-auto mb-4">
                 <i class="bi bi-people-fill"></i>
               </div>
               <h3 class="h5 fw-bold mb-3">Групова та індивідуальна робота</h3>
@@ -909,7 +961,7 @@
           
           <div class="col-md-6 col-lg-3">
             <div class="card-custom text-center h-100">
-              <div class="icon-circle bg-accent text-white mx-auto mb-4">
+              <div class="icon-circle bg-accent text-accent mx-auto mb-4">
                 <i class="bi bi-heart-fill"></i>
               </div>
               <h3 class="h5 fw-bold mb-3">Гуманістичний підхід</h3>
@@ -919,7 +971,7 @@
           
           <div class="col-md-6 col-lg-3">
             <div class="card-custom text-center h-100">
-              <div class="icon-circle bg-accent text-white mx-auto mb-4">
+              <div class="icon-circle bg-accent text-accent mx-auto mb-4">
                 <i class="bi bi-award-fill"></i>
               </div>
               <h3 class="h5 fw-bold mb-3">Досвід та практика</h3>
@@ -1269,6 +1321,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initCarousel('mediaTrack', 'mediaPrev', 'mediaNext');
   initCarousel('storiesTrack', 'storiesPrev', 'storiesNext');
   initCarousel('teamTrack', 'teamPrev', 'teamNext');
+  initCarousel('galleryTrack', 'galleryPrev', 'galleryNext');
 });
 
 // Stories Data
