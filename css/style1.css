@@ -573,9 +573,9 @@ html {
 #dzcb-bubble:after{content:'';position:absolute;right:26px;bottom:-7px;border:8px solid transparent;border-top-color:#ffffff;border-bottom:0;border-left-width:6px;border-right-width:6px}
 #dzcb-fab.show-bubble #dzcb-bubble{opacity:1;transform:translateY(0);pointer-events:auto;cursor:pointer}
 #dzcb-btn{position:relative;display:flex;align-items:center;justify-content:center;width:74px;height:74px;padding:0;margin:0;border-radius:50%;
- background:linear-gradient(135deg,#1C8E8E 0%, #157070 45%, #0E5252 100%);color:#fff;border:none;cursor:pointer;box-shadow:0 8px 28px rgba(28, 142, 142, .5)}
+ background:linear-gradient(135deg,#FFC107 0%, #F9A825 45%, #F57F17 100%);color:#fff;border:none;cursor:pointer;box-shadow:0 8px 28px rgba(255, 193, 7, .5)}
 #dzcb-btn #dzcb-lbl{display:none}
-#dzcb-btn .ring{position:absolute;left:0;top:0;width:74px;height:74px;border-radius:50%;background:#1C8E8E;animation:dzpulse 1.5s infinite;opacity:.55;z-index:-1}
+#dzcb-btn .ring{position:absolute;left:0;top:0;width:74px;height:74px;border-radius:50%;background:#FFC107;animation:dzpulse 1.5s infinite;opacity:.55;z-index:-1}
 @keyframes dzpulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.5);opacity:0}}
 #dzcb-btn svg{width:33px;height:33px;fill:#ffffff;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25));flex:0 0 auto}
 @media(max-width:480px){#dzcb-fab{bottom:20px;left:auto;right:20px}#dzcb-btn{width:64px;height:64px}#dzcb-btn .ring{width:64px;height:64px}#dzcb-btn svg{width:29px;height:29px}#dzcb-box{padding:22px 18px}.dzcb-stp button{width:34px;height:44px;font-size:20px}.dzcb-stp span{width:38px;font-size:20px}.dzcb-time{gap:8px}}

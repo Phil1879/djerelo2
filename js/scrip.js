@@ -119,12 +119,12 @@ const consultButtons = document.querySelectorAll('a.btn-primary-custom, a[href="
              : {1:'Понеділок',2:'Вівторок',3:'Середа',4:'Четвер',5:'Пʼятниця',6:'Субота',7:'Неділя'};
  var L = RU ? {lbl:'Перезвонить',h1:'Перезвоним за 2 минуты',p1:'Оставьте номер, и специалист перезвонит вам в течение 2 минут. Бесплатно и анонимно.',g1:'Перезвоните мне сейчас',
    ch:'Сейчас нерабочее время',ch2:'Выберите удобное время',cp:'Хотите, перезвоним вам в:',g2:'Жду звонка',hlab:'Часы',mlab:'Минуты',toSched:'🕐 Заказать звонок на конкретное время',toNow:'← Перезвонить сейчас',
-   err:'Введите корректный номер телефона',
+   err:'Введите корректный номер телефона',past:'Выберите время в будущем',
    okt:'Перезвоним в течение 2 минут. Держите телефон под рукой.',okh:'Готово! Мы вам перезваниваем',
    sb:'Записали!',st:function(x){return 'Перезвоним '+x+'. Держите телефон под рукой.';}}
   : {lbl:'Передзвонити',h1:'Передзвонимо за 2 хвилини',p1:'Залиште номер, і спеціаліст передзвонить вам протягом 2 хвилин. Безкоштовно та анонімно.',g1:'Передзвоніть мені зараз',
    ch:'Зараз неробочий час',ch2:'Оберіть зручний час',cp:'Хочете, зателефонуємо вам о:',g2:'Чекаю на дзвінок',hlab:'Година',mlab:'Хвилина',toSched:'🕐 Замовити дзвінок на конкретний час',toNow:'← Передзвонити зараз',
-   err:'Введіть коректний номер телефону',
+   err:'Введіть коректний номер телефону',past:'Оберіть час у майбутньому',
    okt:'Передзвонимо протягом 2 хвилин. Тримайте телефон поруч.',okh:'Готово! Ми вам передзвонюємо',
    sb:'Записали!',st:function(x){return 'Передзвонимо '+x+'. Тримайте телефон поруч.';}};
  var API='https://ninarkotikam.com/wp-json/dz/v1/';
@@ -134,17 +134,24 @@ const consultButtons = document.querySelectorAll('a.btn-primary-custom, a[href="
  var ov=$('dzcb-ov');
  function show(id){['dzcb-open','dzcb-closed','dzcb-ring','dzcb-sched'].forEach(function(x){$(x).style.display=(x===id?(x==='dzcb-ring'||x==='dzcb-sched'?'block':'block'):'none');});}
  function close(){ov.classList.remove('on');}
- var minH=9,maxH=21,ch=9,cm=0,slots=[];
+ var minH=9,maxH=23,ch=9,cm=0,slots=[],openMin=540,closeMin=1425,minMin=540,srvToday='',srvNowMin=0,fetchAt=0;
  function pad(n){return (n<10?'0':'')+n;}
  function render(){$('dzcb-hh').textContent=pad(ch);$('dzcb-mm').textContent=pad(cm);}
+ function curNowMin(){ return srvNowMin + Math.floor((Date.now()-fetchAt)/60000); }
+ function clampSel(){ var v=ch*60+cm; if(v<minMin)v=minMin; if(v>closeMin)v=closeMin; ch=Math.floor(v/60); cm=v-ch*60; }
+ function recalcMin(){ var sd=$('dzcb-day')&&$('dzcb-day').value; minMin = (sd&&sd===srvToday)? Math.max(openMin, Math.ceil((curNowMin()+10)/5)*5) : openMin; if(minMin>closeMin)minMin=closeMin; clampSel(); render(); }
  function buildSlots(st){
    var ot=(st.open_time||'09:00').split(':'), ctm=(st.close_time||'21:00').split(':');
    minH=parseInt(ot[0],10); maxH=parseInt(ctm[0],10); ch=minH; cm=parseInt(ot[1],10)||0;
+   openMin=minH*60+(parseInt(ot[1],10)||0); closeMin=maxH*60+(parseInt(ctm[1],10)||0);
+   srvToday=st.today||''; srvNowMin=parseInt(st.now_min,10)||0; fetchAt=Date.now();
    slots=st.slots||[];
    var sel=$('dzcb-day'); sel.innerHTML='';
    slots.forEach(function(s,i){var o=document.createElement('option');o.value=s.date;o.textContent=(WD[s.wd]||'')+', '+pad(s.d)+'.'+pad(s.m);sel.appendChild(o);});
-   render();
+   sel.onchange=recalcMin;
+   recalcMin();
  }
+
  function open(){
    ov.classList.add('on'); show('dzcb-open'); $('dzcb-g1').disabled=false; $('dzcb-g1').textContent=L.g1;
    fetch(API+'cb-status').then(function(r){return r.json();}).then(function(st){
@@ -171,9 +178,9 @@ const consultButtons = document.querySelectorAll('a.btn-primary-custom, a[href="
  // степперы
  document.querySelectorAll('.dzcb-stp button').forEach(function(b){ b.onclick=function(){
    var d=parseInt(b.getAttribute('data-d'),10);
-   if(b.getAttribute('data-t')==='h'){ ch+=d; if(ch<minH)ch=maxH; if(ch>maxH)ch=minH; }
-   else { cm+=d*5; if(cm<0)cm=55; if(cm>55)cm=0; }
-   render();
+   var v=ch*60+cm; v += (b.getAttribute('data-t')==='h') ? d*60 : d*5;
+   if(v<minMin)v=minMin; if(v>closeMin)v=closeMin;
+   ch=Math.floor(v/60); cm=v-ch*60; render();
  };});
  function valid(v){return (v||'').replace(/[^0-9]/g,'').length>=9;}
  // отправка: сейчас
@@ -190,11 +197,14 @@ const consultButtons = document.querySelectorAll('a.btn-primary-custom, a[href="
  };
  // отправка: на время
  $('dzcb-g2').onclick=function(){
-   var v=$('dzcb-ph2').value; if(!valid(v)){$('dzcb-e2').style.display='block';return;}
-   var date=$('dzcb-day').value; var when=date+' '+pad(ch)+':'+pad(cm);
+   var v=$('dzcb-ph2').value; if(!valid(v)){$('dzcb-e2').textContent=L.err;$('dzcb-e2').style.display='block';return;}
+   var date=$('dzcb-day').value;
+   if(date===srvToday && (ch*60+cm) < curNowMin()+5){$('dzcb-e2').textContent=L.past;$('dzcb-e2').style.display='block';return;}
+   var when=date+' '+pad(ch)+':'+pad(cm);
    $('dzcb-e2').style.display='none';$('dzcb-g2').disabled=true;$('dzcb-g2').textContent='...';
    fetch(API+'callback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:v,lang:RU?'ru':'ua',page:location.href,scheduled_at:when,source:location.hostname})})
-   .then(function(r){return r.json();}).then(function(){
+   .then(function(r){return r.json();}).then(function(d){
+     if(d&&d.ok===false){$('dzcb-e2').textContent=(d.err==='past'?L.past:L.err);$('dzcb-e2').style.display='block';$('dzcb-g2').disabled=false;$('dzcb-g2').textContent=L.g2;return;}
      var opt=$('dzcb-day').options[$('dzcb-day').selectedIndex]; var lbl=(opt?opt.textContent:date)+' о '+pad(ch)+':'+pad(cm);
      show('dzcb-sched');$('dzcb-sb').textContent=L.sb;$('dzcb-st').textContent=L.st(lbl);
    }).catch(function(){$('dzcb-g2').disabled=false;$('dzcb-g2').textContent=L.g2;});
