@@ -34,24 +34,6 @@
 
   gtag('config', 'AW-830468260');
 </script>
-  
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1181822537174136');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1181822537174136&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
 
   <!-- TikTok Pixel Code Start -->
 <script>
@@ -66,6 +48,23 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 }(window, document, 'ttq');
 </script>
 <!-- TikTok Pixel Code End -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1395289745603438');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1395289745603438&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
   <!-- Navigation -->
@@ -84,20 +83,59 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           <li class="nav-item"><a class="nav-link" href="#results">Результати</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Контакти</a></li>
         </ul>
-        <a href="#contact" class="btn btn-primary-custom">Записатись</a>
+        <a href="#contact" class="btn btn-primary-custom" id="call">Записатись</a>
       </div>
     </div>
   </nav>
 
+<div id="dzcb-fab"><div id="dzcb-bubble"></div><button id="dzcb-btn" aria-label="callback"><span class="ring"></span>
+<svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+<span id="dzcb-lbl">Передзвонити</span></div>
+<div id="dzcb-ov"><div id="dzcb-box">
+ <button class="x" id="dzcb-x">&times;</button>
+ <div id="dzcb-open">
+   <h3 id="dzcb-h1">Передзвонимо за 2 хвилини</h3>
+   <p id="dzcb-p1">Залиште номер, і наш спеціаліст передзвонить вам протягом 2 хвилин. Безкоштовно та анонімно.</p>
+   <input id="dzcb-ph1" type="tel" inputmode="tel" placeholder="+380 __ ___ __ __" autocomplete="tel">
+   <div class="dzcb-err" id="dzcb-e1"></div>
+   <button class="go" id="dzcb-g1">Передзвоніть мені</button>
+   <button class="go alt" id="dzcb-toSched">🕐 Замовити дзвінок на конкретний час</button>
+ </div>
+ <div id="dzcb-closed" style="display:none">
+   <button class="dzcb-link" id="dzcb-toNow" style="display:none;text-align:left;margin:0 0 6px">← Передзвонити зараз</button>
+   <h3 id="dzcb-ch">На жаль, зараз неробочий час</h3>
+   <p id="dzcb-cp">Хочете, зателефонуємо вам о:</p>
+   <div id="dzcb-pick">
+     <select id="dzcb-day"></select>
+     <div class="dzcb-time">
+       <div class="dzcb-col2"><span class="dzcb-lab" id="dzcb-hlab">Година</span><div class="dzcb-stp"><button type="button" data-t="h" data-d="-1">&minus;</button><span id="dzcb-hh">09</span><button type="button" data-t="h" data-d="1">+</button></div></div>
+       <span class="dzcb-colon">:</span>
+       <div class="dzcb-col2"><span class="dzcb-lab" id="dzcb-mlab">Хвилина</span><div class="dzcb-stp"><button type="button" data-t="m" data-d="-1">&minus;</button><span id="dzcb-mm">00</span><button type="button" data-t="m" data-d="1">+</button></div></div>
+     </div>
+   </div>
+   <input id="dzcb-ph2" type="tel" inputmode="tel" placeholder="+380 __ ___ __ __" autocomplete="tel">
+   <div class="dzcb-err" id="dzcb-e2"></div>
+   <button class="go" id="dzcb-g2">Чекаю на дзвінок</button>
+ </div>
+ <div id="dzcb-ring">
+   <div class="n" id="dzcb-n">60</div>
+   <div class="t" id="dzcb-tt">Передзвонимо протягом 2 хвилин. Тримайте телефон поруч.</div>
+ </div>
+ <div id="dzcb-sched">
+   <div style="font-size:40px">📞</div>
+   <div class="big" id="dzcb-sb">Записали!</div>
+   <div class="t" id="dzcb-st">Передзвонимо у вказаний час.</div>
+ </div>
+</div></div>
   <!-- Hero Section -->
   <section id="home" class="section-spacing hero-gradient">
     <div class="container">
       <div class="row align-items-center g-5">
+        <h2 class="display-4 fw-bold mb-1">ЗАЛЕЖНІСТЬ НЕ «ПСУЄ» ВАШУ ДИТИНУ. ВОНА ЇЇ ВБИВАЄ</h2>
         <div class="col-lg-6">
-          <h1 class="display-4 fw-bold mb-4">Ми допомагаємо знайти шлях до життя без залежності</h1>
-          <p class="fs-4 text-muted mb-4">Психологічне консультування, групи самодопомоги та підтримка молоді на шляху змін.</p>
+          <p class="fs-4 text-muted mb-4">Поки ви чекаєте, що дитина «переросте», наркотик забирає ще один день її життя. У вас більше немає часу на жалість та ілюзії. У вас є час тільки на дію.<br>Ваша дитина тоне, поки ви шукаєте «м'які» методи. Ми - Центр «Джерело». Ми не граємо в ігри. Ми майже двадцять років повертаємо батькам живих дітей.</p>
           <div class="d-flex flex-wrap gap-3">
-            <a href="#contact" class="btn-primary-custom">Записатись на консультацію</a>
+            <a href="#contact" class="btn-primary-custom" id="call">ПОЧАТИ ДІЯТИ</a>
             <a href="#programs" class="btn btn-outline-accent btn-lg">Дізнатись про програму</a>
           </div>
         </div>
@@ -111,8 +149,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   <!-- Emotional Block -->
   <section class="section-spacing bg-accent text-white text-center">
     <div class="container">
-      <h2 class="display-5 fw-bold mb-3">Тут тебе не засуджують</h2>
-      <p class="fs-4">Тут допомагають зрозуміти себе і зробити перший крок.</p>
+      <h2 class="display-5 fw-bold mb-3">ВПАСТИ В КАЛЮЖУ НЕ СОРОМНО</h2>
+      <p class="fs-4">СОРОМНО З НЕЇ НЕ ПІДНЯТИСЬ</p>
     </div>
   </section>
 
@@ -125,17 +163,18 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         </div>
         <div class="col-lg-6">
           <h2 class="display-5 fw-bold mb-4">Реабілітація наркозалежних</h2>
-          <h3 class="h4 text-accent mb-3">Тривалість та глибина програми</h3>
-          <p class="fs-5 text-muted mb-4">Наша програма психологічної реабілітації - це глибокий, поетапний процес відновлення, що триває в середньому від шести до дев'яти місяців.</p>
+          <h3 class="h4 text-accent mb-3">ЧОМУ ЦЕ ЗАЙМАЄ ВІД 9 МІСЯЦІВ</h3>
+          <p class="fs-5 text-muted mb-4">Ми тут не для того, щоб читати моралі чи засуджувати. Ми тут, щоб допомогти встати, обтруситись і чесно подивитися в очі реальності.</p>
           <p class="mb-3">Тривалість залежить від багатьох чинників:</p>
           <ul class="fs-5 text-muted mb-4">
-            <li class="mb-2">життєвого досвіду людини;</li>
-            <li class="mb-2">рівня її внутрішньої мотивації;</li>
-            <li class="mb-2">готовності пройти шлях емоційного, поведінкового та духовного перезапуску.</li>
+            <li class="mb-2">Наскільки глибоко людина загрузла.</li>
+            <li class="mb-2">Чи є в неї хоч іскра бажання жити.</li>
+            <li class="mb-2">Чи готова вона працювати над собою щодня.</li>
           </ul>
-          <p class="fs-5 text-muted mb-4">Це не швидке рішення, а серйозний шлях змін. Психологи, коучі, тренери та наставники щодня допомагають людині знаходити себе, виходити з хаосу залежності та повертатися до справжнього, тверезого життя.</p>
-          <p class="fs-5 text-muted mb-4">За цей період із людиною відбуваються природні внутрішні трансформації, а завдяки підтримці фахівців - ці зміни закріплюються й стають основою нового способу мислення та дій.</p>
-          <a href="https://t.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="btn-primary-custom">Консультація</a>
+          <p class="fs-5 text-muted mb-4">Давайте прямо: нове життя не народжується за тиждень. Дитина формується в утробі матері дев’ять місяців. Щоб народитися заново психологічно і вбити в собі «стару» хвору особистість, потрібно не менше часу.</p>
+          <p class="fs-5 text-muted mb-4">Усе, що пропонують швидше, - це косметичний ремонт, а не капітальна перебудова. Ми не займаємось імітацією лікування. Ми займаємось переродженням.</p>
+          <p class="fs-5 text-muted mb-4">Ми не санаторій. Ми не обіцяємо, що буде легко. Але ми обіцяємо, що будемо поруч - психологи, наставники, команда. Ми витягуємо з хаосу і вчимо жити заново. Тільки так зміни стають справжніми.</p>
+          <a href="https://telegram.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="btn-primary-custom" id="call">Консультація</a>
         </div>
       </div>
     </div>
@@ -153,25 +192,14 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           
           <!-- Contact Cards -->
           <div class="bg-white p-4 p-md-5 rounded-3 shadow-sm border-2" style="border-color: #1C8E8E;">
-            <h3 class="h4 fw-bold mb-4 text-accent">Готові поділитися досвідом</h3>
+            <h3 class="h4 fw-bold mb-4 text-accent">НЕ ВІРИТЕ ПСИХОЛОГАМ? ПОГОВОРІТЬ З МАМОЮ, ЯКА ПРОЙШЛА ПЕКЛО</h3>
 
             <div class="contact-cards-wrapper">
-              <!-- Варвара -->
-              <div class="d-flex align-items-start mb-4 pb-4 border-bottom">
-                <div class="flex-grow-1">
-                  <h4 class="h5 fw-bold text-dark mb-2">Випускниця Варвара</h4>
-                  <p class="text-muted mb-3">Готова поговорити чесно, без осуду й пафосу</p>
-                  <a href="tel:+380950985640" class="fw-bold text-accent text-decoration-none fs-5">
-                    +380 95 098 5640
-                  </a>
-                </div>
-              </div>
-
               <!-- Мама Люба -->
               <div class="d-flex align-items-start">
                 <div class="flex-grow-1">
                   <h4 class="h5 fw-bold text-dark mb-2">Голова батьківського комітету, мама Люба</h4>
-                  <p class="text-muted mb-3">Вислухає, підтримає, допоможе знайти відповіді</p>
+                  <p class="text-muted mb-3">Теорія - це одне. А врятований син - зовсім інше.<br>Це Любов Іванівна, голова нашого батьківського комітету. Вона стояла на краю прірви, як і ви зараз. Вона знає, що таке безсонні ночі, зниклі речі, брехня, страх кожного дзвінка.<br>Але вона витягла свою дитину.<br>Не випадково. Не чудом.<br>А реальною дією.<br>Вона не співробітник. Вона доказ.</p>
                   <a href="tel:+380507052419" class="fw-bold text-accent text-decoration-none fs-5">
                     +380 50 705 2419
                   </a>
@@ -185,7 +213,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       <div class="col-lg-6">
         <h2 class="display-5 fw-bold mb-4">Про центр</h2>
         <div class="fs-5 text-muted">
-          <p class="mb-4"><strong>ГО "Центр Джерело"</strong> - офіційно зареєстрована неприбуткова організація, що працює з 2006 року.</p>
+          <p class="mb-4"><strong>МИ НЕ ЛІКУЄМО «НАСЛІДКИ». МИ ПРИБИРАЄМО «ПРИЧИНУ».</strong></p>
+          <p class="mb-4"><strong>ГО «Центр Джерело» </strong> - це не просто організація. Це форпост, який стоїть з 2006 року. Майже двадцять років ми доводимо: колишні наркомани існують.</p>
           <p class="mb-4"><strong>Наша мета:</strong> допомога людям, які борються із залежністю, та їхнім родинам на шляху до відновлення, духовного росту та внутрішньої рівноваги.</p>
           <div class="bg-accent-light p-4 rounded-3">
             <h3 class="h4 fw-bold mb-3">Наші принципи:</h3>
@@ -206,8 +235,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   <section class="section-spacing">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="display-5 fw-bold mb-3">Що ми НЕ робимо</h2>
-        <p class="fs-5 text-muted">Важливо розуміти межі нашої діяльності</p>
+        <h2 class="display-5 fw-bold mb-3">ЧОГО ТУТ НЕ БУДЕ</h2>
+        <p class="fs-5 text-muted">Ми не імітуємо медицину. Ми робимо те, що їй не під силу.</p>
       </div>
       
       <div class="row g-4 mb-5">
@@ -216,8 +245,26 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
               <i class="bi bi-x-circle-fill"></i>
             </div>
-            <h3 class="h5 fw-bold mb-3">Не надаємо медичні послуги</h3>
-            <p class="text-muted">Ми не є медичним закладом. Не проводимо медичне обстеження, не призначаємо лікування та не видаємо медикаменти.</p>
+            <h3 class="h5 fw-bold mb-3">Ми не лікарня</h3>
+            <p class="text-muted">Лікарі рятують тіло, знімають ломку, чистять кров. Це важливо, але лише початок. Якщо ви шукаєте крапельницю - вам у клініку. Якщо ви шукаєте нове життя - вам до нас.</p>
+          </div>
+        </div>
+        <!-- <div class="col-md-6 col-lg-4">
+          <div class="card-custom h-100 text-center">
+            <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
+              <i class="bi bi-x-circle-fill"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-3">Ми не даємо «чарівних пігулок»</h3>
+            <p class="text-muted">Залежність сидить не в шлунку, а в голові. Пігулками характер не зміниш. Ми не глушимо біль хімією, ми вчимо з ним справлятися.</p>
+          </div>
+        </div> -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom h-100 text-center">
+            <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
+              <i class="bi bi-x-circle-fill"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-3">Ми не тюрма</h3>
+            <p class="text-muted">Тільки добровільно. Неможливо врятувати того, хто хоче померти. Ми працюємо тільки з тими, хто сказав «досить» і готовий прийняти допомогу.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -225,52 +272,27 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
               <i class="bi bi-x-circle-fill"></i>
             </div>
-            <h3 class="h5 fw-bold mb-3">Не ставимо діагнози</h3>
-            <p class="text-muted">Діагностика медичних станів - прерогатива лікарів. Ми надаємо психологічну підтримку, але не встановлюємо медичні діагнози.</p>
+            <h3 class="h5 fw-bold mb-3">Ми не даємо фальшивих гарантій</h3>
+            <p class="text-muted">Результат залежить не від суми, а від роботи, яку людина робить щодня.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card-custom h-100 text-center">
-            <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
-              <i class="bi bi-x-circle-fill"></i>
-            </div>
-            <h3 class="h5 fw-bold mb-3">Не гарантуємо конкретних результатів</h3>
-            <p class="text-muted">Кожна людина унікальна. Ми не можемо обіцяти абсолютних результатів. Натомість, ми створюємо умови для позитивних змін.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card-custom h-100 text-center">
-            <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
-              <i class="bi bi-x-circle-fill"></i>
-            </div>
-            <h3 class="h5 fw-bold mb-3">Не проводимо медичну детоксикацію</h3>
-            <p class="text-muted">Для медичної детоксикації необхідно звертатися до лікарні. Ми працюємо на етапі психологічної реабілітації.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card-custom h-100 text-center">
-            <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
-              <i class="bi bi-x-circle-fill"></i>
-            </div>
-            <h3 class="h5 fw-bold mb-3">Не замінюємо професійну медичну допомогу</h3>
-            <p class="text-muted">Наша робота - доповнення до медичної допомоги, а не її заміна. Рекомендуємо консультуватися з лікарем при медичних питаннях.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card-custom h-100 text-center">
-            <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
-              <i class="bi bi-x-circle-fill"></i>
-            </div>
-            <h3 class="h5 fw-bold mb-3">Не використовуємо примусові методи</h3>
-            <p class="text-muted">Вся робота будується на принципах добровільності та повази до особистості. Ми не застосовуємо примусу чи маніпуляції.</p>
-          </div>
         </div>
       </div>
       
       <div class="bg-accent-light rounded-3 p-5 text-center">
-        <h3 class="h4 fw-bold mb-3">Що МИ робимо</h3>
+        <h2 class="display-5 fw-bold mb-3">Що МИ робимо</h2>
         <p class="fs-5 mb-4">Надаємо <strong>психологічну підтримку</strong>, <strong>консультування</strong> та створюємо <strong>безпечний простір</strong> для особистісного розвитку та змін. Допомагаємо людям знайти внутрішні ресурси для відновлення.</p>
-        <a href="#programs" class="btn-primary-custom">Дізнатись більше про наші програми</a>
+        <div class="text-start">
+        <ul class="list-unstyled fs-5 mb-4 text-left">
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>Ми запускаємо процес глибокої реконструкції особистості.</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>Ми створюємо «вакуум чистоти» - територію без спокус, без старих «друзів», без можливості дістати дозу.</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>Ми вчимо жити без анестезії - радіти, злитися, спілкуватися, вирішувати проблеми тверезо.</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>Ми повертаємо гідність. Тут не дивляться як на «хворого». Тут дивляться як на людину, яка оступилася, але має сили піднятися.</li>
+            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>Ми працюємо з родиною. Поки син чи донька вчаться жити заново, ми вчимо вас не руйнувати прогрес співзалежністю.</li>
+        </ul>
+        </div>
+        <p class="fs-5 mb-4">«Швидкого дива» не буде. Ми гарантуємо якість, підтверджену роками і сотнями врятованих життів. Єдиний реальний шлях - повна психологічна перебудова особистості.</p>
+        <a href="#programs" class="btn-primary-custom" id="call">Дізнатись більше про наші програми</a>
       </div>
     </div>
   </section>
@@ -454,7 +476,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
     <!-- Telegram Bot Button -->
     <div class="text-center mt-5">
-      <a href="https://t.me/ninarkotikam_bot" target="_blank" class="btn-primary-custom">
+      <a href="https://telegram.me/ninarkotikam_bot" target="_blank" class="btn-primary-custom2">
         <i class="bi bi-telegram me-2"></i>
         Підписатися на нашого бота
       </a>
@@ -563,7 +585,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         </div>
         
         <div class="text-center">
-          <a href="https://t.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill">
+          <a href="https://telegram.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill" id="call">
             <i class="bi bi-telegram me-2"></i>
             Записатися на консультацію
           </a>
@@ -674,7 +696,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
     <!-- Consultation Button -->
     <div class="text-center mt-5">
-      <a href="https://t.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="btn-primary-custom">
+      <a href="https://telegram.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="btn-primary-custom" id="call">
         <i class="bi bi-telegram me-2"></i>
         Записатися на консультацію
       </a>
@@ -824,7 +846,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <div class="row justify-content-center mb-5">
             <div class="col-lg-10 text-center">
                 <h2 class="display-5 fw-bold mb-4 text-accent" data-ua="Наша команда" data-ru="Наша команда">
-                    Наша команда
+                    ТІ, ХТО ПРОЙШОВ ЦЕЙ ШЛЯХ
                 </h2>
                 <p class="fs-5 text-muted" data-ua="Професіонали, які пройшли шлях змін і готові допомогти вам" data-ru="Профессионалы, которые прошли путь изменений и готовы помочь вам">
                     Професіонали, які пройшли шлях змін і готові допомогти вам
@@ -1006,13 +1028,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <h2 class="display-5 fw-bold mb-4">Перший крок - найважчий</h2>
         <p class="fs-5 mb-4">Ми створюємо умови для змін, але шлях проходить кожна людина самостійно.</p>
         <p class="fs-5 mb-5">Наш досвід показує, що системна психологічна підтримка значно підвищує шанси на позитивні зміни.</p>
-        <a href="#contact" class="btn btn-light btn-lg fw-semibold px-5">Отримати консультацію зараз</a>
+        <a href="#contact" class="btn btn-light btn-lg fw-semibold px-5" id="call">Отримати консультацію зараз</a>
       </div>
     </div>
   </div>
 </section>
  <!-- Footer -->
-<footer class="py-5 bg-dark text-white">
+<footer class="py-5 bg-dark text-white" id="contact">
   <div class="container">
     <div class="row g-5">
       <div class="col-lg-4">
@@ -1023,8 +1045,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           <a href="https://www.youtube.com/@ninarkotikam" target="_blank" class="text-white fs-5"><i class="bi bi-youtube"></i></a>
           <a href="https://www.facebook.com/ninarkotikam" target="_blank" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/djerelo.help" target="_blank" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="https://t.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="text-white fs-5"><i class="bi bi-telegram"></i></a>
-          <a href="https://www.tiktok.com/@ninarkotikam" target="_blank" class="text-white fs-5"><i class="bi bi-tiktok"></i></a>
+          <a href="https://telegram.me/Sozalezjnist_bot?start=w41199362" target="_blank" class="text-white fs-5"><i class="bi bi-telegram"></i></a>
+          <a href="https://www.tiktok.com/@djerelo_help" target="_blank" class="text-white fs-5"><i class="bi bi-tiktok"></i></a>
         </div>
       </div>
       <div class="col-lg-2">
@@ -1041,7 +1063,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       <div class="col-lg-3">
         <h4 class="h5 fw-bold mb-4">Контакти</h4>
         <ul class="list-unstyled text-light">
-          <li class="mb-2">+38 (099) 258-74-84</li>
+          <li class="mb-2">+38 (099) 750-76-12</li>
           <li class="mb-2">ninarkotikam@ukr.net</li>
           <li class="mb-2">село Погреби, вул. Космічна, 8А</li>
           <li>Київська обл., Обухівський р-н</li>
@@ -1192,50 +1214,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   
   <script src="js/scrip.js"></script>
 
-  <!-- Binotel call btn -->
-  <script type="text/javascript">
-  (function(d, w, s) {
-    var widgetHash = 'kt00r4nzn6va68k92zqf', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
-    gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js';
-    var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
-  })(document, window, 'script');
-  </script> 
-<script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
-        'send_to': 'AW-830468260/Ml6iCNWM2bAbEKTh_4sD',
-        'event_callback': callback
-    });
-    return false;
-  }
-
-  // === КОД ДЛЯ ОТСЛЕЖИВАНИЯ КНОПКИ BINOTEL ===
-  document.addEventListener('DOMContentLoaded', function() {
-    // Слушаем все клики на документе
-    document.addEventListener('click', function(event) {
-      // Проверяем, был ли клик по самой кнопке или по любому из её внутренних элементов
-      const clickedElement = event.target.closest('#bingc-phone-button');
-      
-      if (clickedElement) {
-        // Запускаем отправку конверсии в Google Ads
-        gtag_report_conversion();
-        
-        // Дополнительно отправляем событие в Google Analytics 4
-        gtag('event', 'binotel_callback_click', {
-          'event_category': 'Кнопка звонка',
-          'event_label': 'Binotel Widget Button'
-        });
-        
-        console.log('Клик по кнопке Binotel зафиксирован! Конверсия отправлена.');
-      }
-    });
-  });
-  </script>
 <script>
 // Media Carousel Functionality
 document.addEventListener('DOMContentLoaded', function() {
